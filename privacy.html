@@ -18,13 +18,13 @@
   <main>
     <div class="wrap">
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective October 17, 2026</p>
+      <p class="meta">Effective October 18, 2026</p>
 
       <p>Stuard is a personal life management app for iPhone, iPad and Mac, developed independently. This policy explains what information Stuard handles, where it’s kept, and when it leaves your devices.</p>
 
       <h2>The short version</h2>
       <ul>
-        <li>Stuard has no advertising, no analytics and no tracking, and the developer doesn’t run servers of their own.</li>
+        <li>Stuard has no advertising, no analytics and no tracking. The only server the developer runs is a small helper for the Oura connection, and it stores nothing about you.</li>
         <li>Your information is kept on your devices and in your own iCloud account, through Apple’s CloudKit. A small amount needed to connect people (described below) passes through Stuard’s shared CloudKit database.</li>
         <li>It is shared with other people only when you choose to share it with your household or a connection.</li>
         <li>Stuard does not sell your information.</li>
@@ -63,8 +63,7 @@
       <p>When you look up a book in Library, Stuard sends the book’s ISBN or title to <a href="https://openlibrary.org/">Open Library</a> to fetch its details. Nothing else is sent.</p>
 
       <h2 id="oura">Oura</h2>
-      <div class="note">Stuard’s Oura connection is being built. This section describes how it will work. If it changes, this policy will be updated before the change takes effect.</div>
-      <p>If you connect your Oura account, Stuard will ask Oura for permission, through Oura’s own sign-in and consent screen, to read:</p>
+      <p>If you connect your Oura account, Stuard asks Oura for permission, through Oura’s own sign-in and consent screen, to read:</p>
       <ul>
         <li>daily sleep, readiness and activity summaries;</li>
         <li>heart rate, SpO2, workouts, sessions and tags, if you grant those;</li>
@@ -73,7 +72,8 @@
       <p><strong>How it’s used:</strong> to show your sleep, readiness and activity in Stuard’s Health section alongside your other health information, and to help you see trends. Stuard only reads from Oura; it does not change anything in your Oura account.</p>
       <p><strong>Where it’s kept:</strong> Oura data Stuard imports is kept on your devices and in your private iCloud database. It is not shared with your household or connections.</p>
       <p><strong>Intelligence:</strong> Apple Intelligence may use your Oura data on your device to answer your questions. If you have connected Claude (described above), Ask Stuard may include relevant Oura summaries in a request to Anthropic when your question needs them.</p>
-      <p><strong>Access credentials:</strong> the access granted by Oura is stored in your Apple Keychain and used only to request your data from Oura.</p>
+      <p><strong>Access credentials:</strong> the access granted by Oura is stored in your iCloud Keychain and used only to request your data from Oura.</p>
+      <p><strong>Stuard’s Oura helper:</strong> a small service run by the developer on Cloudflare Workers does two things that can’t safely happen inside the app. It completes Oura sign-in and renews access, adding Stuard’s Oura application secret, and passes the resulting access straight back to the app without keeping it. When Oura reports that you have new data, the helper writes a small notice to Stuard’s public CloudKit database containing only your Oura user identifier and the kind of data that changed (for example, “sleep”), so your devices can fetch the update from Oura. The helper does not receive or store your health data. Cloudflare processes these requests under <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare’s Privacy Policy</a>.</p>
       <p><strong>Disconnecting:</strong> you can revoke Stuard’s access at any time from your Oura account. When you disconnect Oura in Stuard, Stuard stops importing new data; data already imported stays in Stuard.</p>
       <p>Stuard does not sell Oura data, use it for advertising, or share it with anyone other than as described above.</p>
 
