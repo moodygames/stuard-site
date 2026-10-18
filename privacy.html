@@ -60,7 +60,7 @@
       <p>You can instead choose to connect Anthropic’s Claude using your own Anthropic API key. When you do, Stuard sends Anthropic what you type or say, plus only the details needed to understand it. Meal photos are sent to Claude only if you separately allow that in Nutrition settings. Your key is stored in your iCloud Keychain and sent only to Anthropic. Anthropic’s handling of that data is governed by your agreement with Anthropic and <a href="https://www.anthropic.com/legal/privacy">Anthropic’s Privacy Policy</a>.</p>
 
       <h2>Book lookups</h2>
-      <p>When you look up a book in Library, Stuard sends the book’s ISBN or title to <a href="https://openlibrary.org/">Open Library</a> to fetch its details. Nothing else is sent.</p>
+      <p>When you look up a book in Library, or a book is missing its cover, Stuard sends only the book’s ISBN to <a href="https://openlibrary.org/">Open Library</a> to fetch its details and cover. If Open Library has no cover, the ISBN may also be sent to <a href="https://books.google.com/">Google Books</a> and, for HarperCollins, Zondervan and Thomas Nelson titles, to the publisher’s FaithGateway catalog. Nothing else is sent.</p>
 
       <h2 id="oura">Oura</h2>
       <p>If you connect your Oura account, Stuard asks Oura for permission, through Oura’s own sign-in and consent screen, to read:</p>
