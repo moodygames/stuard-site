@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Stuard</title>
+  <meta name="description" content="How Stuard handles your information, including data from Oura.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="favicon.png" alt=""><span>Stuard</span></a>
+      <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective October 17, 2026</p>
+
+      <p>Stuard is a personal life management app for iPhone, iPad and Mac, developed independently. This policy explains what information Stuard handles, where it’s kept, and when it leaves your devices.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>Stuard has no advertising, no analytics and no tracking, and the developer doesn’t run servers of their own.</li>
+        <li>Your information is kept on your devices and in your own iCloud account, through Apple’s CloudKit. A small amount needed to connect people (described below) passes through Stuard’s shared CloudKit database.</li>
+        <li>It is shared with other people only when you choose to share it with your household or a connection.</li>
+        <li>Stuard does not sell your information.</li>
+      </ul>
+
+      <h2>Where your information is kept</h2>
+      <p>What you put in Stuard (tasks, events, notes, people, messages, health records, meals and so on) is stored on your devices and synced through your private iCloud database using Apple’s CloudKit. The developer can’t read your private iCloud database. Apple’s handling of iCloud data is described in <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>.</p>
+      <p>If you create or join a household, the items you choose to share with it (and the modules you give members access to) are stored in a shared iCloud space that the household’s members can see. Direct messages you send are visible to the person you send them to.</p>
+      <p>Sign-in uses Sign in with Apple. Stuard receives the name and email you choose to share with it.</p>
+
+      <h3>Connecting with people</h3>
+      <p>To deliver connection requests, household invitations and message alerts between different iCloud accounts, Stuard uses its public CloudKit database. It’s hosted by Apple, and the developer can access it. It holds only:</p>
+      <ul>
+        <li><strong>Connection requests and replies:</strong> your name, your Apple-provided user identifier, a one-way hash of the email or phone number you searched for, and the name or contact you entered for that person.</li>
+        <li><strong>Household invitations and responses:</strong> the household’s name, your name, the role offered, the email or phone number you invited, and a link that lets the invited person join.</li>
+        <li><strong>Message alerts:</strong> the sender’s and recipient’s identifiers, the sender’s name, a generic line such as “Sent you a message”, and an encrypted preview that only the conversation’s participants can read.</li>
+      </ul>
+      <p>So that others can find you, Stuard stores one-way hashes of the email address and phone number you choose in your profile, not the addresses themselves.</p>
+
+      <h2>Permissions you can grant</h2>
+      <p>Stuard asks before using any of these, and each one is used only for the feature that needs it:</p>
+      <ul>
+        <li><strong>Calendars:</strong> to show your Apple Calendar events next to Stuard’s and add events to calendars you choose.</li>
+        <li><strong>Contacts:</strong> to import the contacts you pick into your People list.</li>
+        <li><strong>Camera and photos:</strong> to photograph meals and coffee bags, attach photos to messages, and save photos you choose. On iPhones with a depth camera, depth measurements of a meal photo are used on the device to estimate portion size.</li>
+        <li><strong>Notifications:</strong> for reminders and message alerts.</li>
+        <li><strong>Apple Health:</strong> if you turn it on, Stuard writes the meals you log for yourself (calories and nutrients) to Apple Health. Stuard does not read from Apple Health.</li>
+        <li><strong>Face ID:</strong> to unlock notes you lock.</li>
+      </ul>
+
+      <h2>Intelligence</h2>
+      <p>Stuard’s smart features (understanding what you capture, answering questions about your plans, estimating a meal’s nutrition) use Apple Intelligence on your device by default.</p>
+      <p>You can instead choose to connect Anthropic’s Claude using your own Anthropic API key. When you do, Stuard sends Anthropic what you type or say, plus only the details needed to understand it. Meal photos are sent to Claude only if you separately allow that in Nutrition settings. Your key is stored in your iCloud Keychain and sent only to Anthropic. Anthropic’s handling of that data is governed by your agreement with Anthropic and <a href="https://www.anthropic.com/legal/privacy">Anthropic’s Privacy Policy</a>.</p>
+
+      <h2>Book lookups</h2>
+      <p>When you look up a book in Library, Stuard sends the book’s ISBN or title to <a href="https://openlibrary.org/">Open Library</a> to fetch its details. Nothing else is sent.</p>
+
+      <h2 id="oura">Oura</h2>
+      <div class="note">Stuard’s Oura connection is being built. This section describes how it will work. If it changes, this policy will be updated before the change takes effect.</div>
+      <p>If you connect your Oura account, Stuard will ask Oura for permission, through Oura’s own sign-in and consent screen, to read:</p>
+      <ul>
+        <li>daily sleep, readiness and activity summaries;</li>
+        <li>heart rate, SpO2, workouts, sessions and tags, if you grant those;</li>
+        <li>basic profile details Oura provides (such as age, height and weight), used to put your data in context.</li>
+      </ul>
+      <p><strong>How it’s used:</strong> to show your sleep, readiness and activity in Stuard’s Health section alongside your other health information, and to help you see trends. Stuard only reads from Oura; it does not change anything in your Oura account.</p>
+      <p><strong>Where it’s kept:</strong> Oura data Stuard imports is kept on your devices and in your private iCloud database. It is not shared with your household or connections.</p>
+      <p><strong>Intelligence:</strong> Apple Intelligence may use your Oura data on your device to answer your questions. If you have connected Claude (described above), Ask Stuard may include relevant Oura summaries in a request to Anthropic when your question needs them.</p>
+      <p><strong>Access credentials:</strong> the access granted by Oura is stored in your Apple Keychain and used only to request your data from Oura.</p>
+      <p><strong>Disconnecting:</strong> you can revoke Stuard’s access at any time from your Oura account. When you disconnect Oura in Stuard, Stuard stops importing new data; data already imported stays in Stuard.</p>
+      <p>Stuard does not sell Oura data, use it for advertising, or share it with anyone other than as described above.</p>
+
+      <h2>Removing your information</h2>
+      <p>You can delete items in Stuard. Deleting the app removes the information stored on that device. Information in your iCloud can be managed in iOS Settings › your name › iCloud › Manage Storage. Items you shared with a household remain visible to its members until they are deleted or you stop sharing them.</p>
+
+      <h2>Children</h2>
+      <p>Stuard is not directed to children under 13. It lets parents keep health records for their children; those records belong to the parent’s account.</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, the new version will be posted on this page with a new effective date.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about privacy can be sent by opening an issue at <a href="https://github.com/moodygames/stuard-site/issues">github.com/moodygames/stuard-site/issues</a>.</p>
+    </div>
+  </main>
+  <footer class="site">
+    <div class="wrap">
+      <a href="./">Home</a><a href="terms.html">Terms of Service</a><a href="https://github.com/moodygames/stuard-site/issues">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>
